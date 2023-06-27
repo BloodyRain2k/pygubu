@@ -30,7 +30,7 @@ class CalendarFrameBuilder(BuilderObject):
     )
     ro_properties = TTKFrame.ro_properties
     properties = OPTIONS_STANDARD + OPTIONS_SPECIFIC + OPTIONS_CUSTOM
-    virtual_events = ("<<CalendarFrameDateSelected>>",)
+    virtual_events = (CalendarFrame.SEQ_CalendarFrameDateSelected,)
 
 
 _builder_id = "pygubu.builder.widgets.calendarframe"

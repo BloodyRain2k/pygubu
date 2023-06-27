@@ -62,6 +62,8 @@ class CalendarFrame(ttk.Frame):
         <<CalendarFrameDateSelected>>
     """
 
+    SEQ_CalendarFrameDateSelected = "<<CalendarFrameDateSelected>>"
+
     datetime = calendar.datetime.datetime
     timedelta = calendar.datetime.timedelta
 
@@ -539,7 +541,7 @@ class CalendarFrame(ttk.Frame):
         self._reconfigure_date()
         self._selection = (year, month, day)
         self._call_mark_days()
-        self.event_generate("<<CalendarFrameDateSelected>>")
+        self.event_generate(CalendarFrame.SEQ_CalendarFrameDateSelected)
 
 
 if __name__ == "__main__":
